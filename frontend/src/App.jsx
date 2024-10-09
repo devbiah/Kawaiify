@@ -1,26 +1,14 @@
-// import { useNavigate } from "react-router-dom";
-import { Container, TextField } from "@mui/material";
-import './App.css'
-import './index.css'
+import React from "react";
+import WebRoutes from "./routes/index"
+import "./index.css"
+import "./App.css"
 
-const Register = () => {
-//   const navigate = useNavigate();
-
+function App() {
   return (
-    <div>
-      <h2 className="text-6xl">Se Inscreva e comece a curtir</h2>
-      <form>
-        <TextField
-          label="Email"
-          type="email"
-          required
-        />
-        <button type="submit" className="bg-[#FFFFFF] text-[#A07CAC]" >
-          Avançar
-        </button>
-        </form>
-        </div>
+    <div className="App">
+      <WebRoutes />
+    </div>
   );
-};
+}
 
-export default Register;
+export default App;
