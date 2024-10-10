@@ -1,23 +1,23 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, TextField } from "@mui/material";
 import '../../App.css';
 import '../../index.css';
 import spot from "../../img/spot.png";
 
 const Register = () => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         navigate('/create-password');
     };
 
     return (
         <div className="bg-gradient-to-b from-[#9171A2] to-[#CDB9D8] min-h-screen flex items-center justify-center">
             <Container className="flex flex-col items-center">
-                <img src={spot} alt="Spot" className="mb-4" />
+                <img src={spot} alt="Spot" className="mb-3" />
 
-                <h1 className="text-6xl mb-10 text-[#FFFFFF] text-center font-bold">
+                <h1 className="text-6xl mb-9 text-[#FFFFFF] text-center font-bold">
                     Se inscreva e <br /> comece a curtir
                 </h1>
                 <form className="space-y-4 flex flex-col" onSubmit={handleSubmit}>
@@ -58,6 +58,9 @@ const Register = () => {
                         Avançar
                     </button>
                 </form>
+                <p className="text-[#FFFFFF] mt-4 text-[18px]">
+                    Já tem uma conta? <Link to="/login" className="text-[#FFFFFF] italic font-bold underline">Faça login aqui.</Link>
+                </p>
 
             </Container>
         </div>

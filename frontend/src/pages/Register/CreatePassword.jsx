@@ -83,9 +83,6 @@ const CreatePassword = () => {
                     </button>
                 </form>
 
-                <p className="text-[#ffffff] mt-4 text-[18px]">
-                    Já tem uma conta? <Link to="/login" className="text-[#ffffff] italic font-bold underline">Faça login</Link>
-                </p>
             </Container>
         </div>
     );
